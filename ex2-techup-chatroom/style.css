@@ -1,1 +1,108 @@
-/* Start coding here */
+/* Global layout */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Sarabun", sans-serif;
+  background-color: #ffffff;
+}
+
+.chatroom {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-header {
+  background-color: #777777;
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 18px;
+}
+
+.chat-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: black;
+  padding: 40px 32px;
+  gap: 10px;
+}
+
+.message-row {
+  display: flex;
+}
+
+.message-row.right {
+  justify-content: flex-end;
+}
+
+.message-row.left {
+  justify-content: flex-start;
+}
+
+/* Message bubbles */
+.message-bubble {
+  padding: 8px 18px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 16px;
+  width: 260px;
+}
+
+.bubble-left {
+  background-color: #777777;
+  color: #ffffff;
+}
+
+.bubble-right {
+  max-width: 260px;
+}
+
+.emoji {
+  font-size: 20px;
+}
+
+.bubble-green {
+  background-color: #0cc429;
+  color: black;
+}
+
+.bubble-gray {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.message-wrapper {
+  margin-bottom: 8px;
+}
+
+/* Positioned Layout for gray box close button */
+.bubble-gray-wrapper {
+  position: relative; /* containing block for close button */
+  display: inline-block;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0px;
+  right: -5px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: none;
+  background-color: lightgray;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
